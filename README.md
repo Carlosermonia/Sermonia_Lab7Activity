@@ -1,5 +1,13 @@
-# angular-15-signup-verification-boilerplate
+# Sermonia Lab7 Activity - Angular Frontend
 
-Angular 15 Auth Boilerplate - Sign Up with Verification, Login and Forgot Password
+Angular 15 Auth Boilerplate with Email Sign Up, Verification, Login and Forgot Password.
 
-Documentation at https://jasonwatmore.com/angular-15-auth-boilerplate-sign-up-with-verification-login-and-forgot-password
+## Live Demo
+- Frontend: (add link after deployment)
+- Backend API: (add link after deployment)
+
+## Setup Instructions
+1. Clone this repo
+2. Run `npm install`
+3. Run `npm start`
+4. Open `http://localhost:4200`
