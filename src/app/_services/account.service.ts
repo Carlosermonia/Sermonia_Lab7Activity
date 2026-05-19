@@ -36,11 +36,15 @@ export class AccountService {
     }
 
     logout() {
-        this.http.post<any>(`${baseUrl}/revoke-token`, {}, { withCredentials: true }).subscribe();
-        this.stopRefreshTokenTimer();
-        this.accountSubject.next(null);
-        this.router.navigate(['/account/login']);
-    }
+    this.http.post<any>(`${baseUrl}/revoke-token`, {}, { withCredentials: true })
+        .subscribe({
+            complete: () => {
+                this.stopRefreshTokenTimer();
+                this.accountSubject.next(null);
+                this.router.navigate(['/account/login']);
+            }
+        });
+}
 
     refreshToken() {
         return this.http.post<any>(`${baseUrl}/refresh-token`, {}, { withCredentials: true })
